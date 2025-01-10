@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pager{
+    margin-top: 30px;
+}
+.pager .item{
+    border: 1px solid #333;
+    padding: 2px 8px;
+    color: #333;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.pager .item.disabled{
+    border: 1px solid #ddd;
+    color: #ddd;
+    cursor: not-allowed;
+}
+.pager .item.active{
+    border: none;
+    color: red;
+}
+.pager span{
+    user-select: none;
+}
+.model{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    font-size: 3em;
+}
+.model p{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}

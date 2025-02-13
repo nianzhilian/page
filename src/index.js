@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //import PagerContainer from './components/PagerContainer';
 import CheckBoxGroup from './components/common/CheckBoxGroup';
-import Test from './components/form/Test';
+import Test from './components/taks/Test';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<Test />);

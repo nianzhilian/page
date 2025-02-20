@@ -1,0 +1,21 @@
+.page span{
+    border: 1px solid #666;
+    padding: 2px 5px;
+    font-size: 12px;
+    background: #e9e8e8;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    user-select: none;
+}
+.page span.disabled{
+    cursor:not-allowed;
+    background: #e4e3e3;
+    color: #969393;
+    border: 1px solid #ccc;
+}
+.page span.active{
+    background: red;
+    color: #fff;
+    border: 1px solid red;
+}

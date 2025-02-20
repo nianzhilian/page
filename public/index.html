@@ -38,6 +38,33 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      //二个阶段  三个状态   未决阶段  完成阶段   三个状态：pending状态 完成状态  失败状态
+      var p1 = new Promise((resolve,reject)=>{
+        console.log('创建一个promise对象 会立即执行')
+        resolve(123)
+      })
+      //p2也返回的是一个promise
+      //p2的状态 取决于 对p1有没有做正确的处理 如果做处理了  他的状态就取决于对p1的处理过程 也就是 then方法传递的回调函数 处理过程中
+      //没有报错p2的状态 就是完成状态 完成的数据取决于他的返回值  
+      //处理过程中报错了p2的状态就是失败状态 
+      var p2 = p1.then((value) => {
+        return 789
+      })
+      console.log(p2)
+
+      var oop = {
+        name:'张三',
+        age:10,
+        while:'白色'
+      }
+
+      function oofn({name,...props}){
+        console.log(name)
+        console.log(props)
+      }
+      oofn(oop)
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
